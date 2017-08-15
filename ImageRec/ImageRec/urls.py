@@ -16,11 +16,13 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
-from imageapp.views import home,upload_pic
+from imageapp.views import home,upload_pic,prediction
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',home),
     url(r'^upload_pic',upload_pic,name ='upload_pic'),
+    url(r'^prediction',prediction,name = "prediction"),
+
 ]
 
 	
